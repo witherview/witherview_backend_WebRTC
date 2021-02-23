@@ -9,8 +9,8 @@ const socket = require('socket.io');
 
 const io = socket(server, {
   path: '/socket',
-  // 프록시 없이 연결할 때.
-  origins: ["https://witherview-webrtc.herokuapp.com/"],
+  // 프록시 없이 연결할 때
+  origins: ["http://localhost:3000", "https://witherview-webrtc.herokuapp.com/"],
 
   // optional, useful for custom headers
   handlePreflightRequest: (req, res) => {
